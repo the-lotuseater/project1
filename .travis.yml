@@ -7,4 +7,4 @@ before_install:
   - docker build -t thelotuseater/project1 -f Dockerfile.dev .
 
 script: #to make sure the process quits once the tests are done running
-  - docker run -e CI=true USERNAME/docker-react npm run test
+  - docker run -e CI=true thelotuseater/project1 npm run test
