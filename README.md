@@ -2,7 +2,7 @@
 
 This is a sample project to demonstrate hotswapping of code, and bookmarking directories in docker by using the volumes tag.
 
-##Usage
+## Usage
 Run ```docker-compose up to build the image and serve it. ```
 
 Run ``` docker-compose down to stop the running container. ```
