@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services: #install docker
+  - docker
+
+before_install:
+  - docker build -t thelotuseater/project1 -f Dockerfile.dev .
+
+script: #to make sure the process quits once the tests are done running
+  - docker run -e CI=true USERNAME/docker-react npm run test
