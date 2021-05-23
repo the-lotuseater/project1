@@ -4,9 +4,9 @@ This is a sample project to demonstrate hotswapping of code, and bookmarking dir
 
 ## Usage
 
-Run ```docker-compose``` up to build the image and serve it.
+Run ```docker-compose up``` to build the image and serve it.
 
-Run ``` docker-compose``` down to stop the running container.
+Run ``` docker-compose down``` to stop the running container.
 
 
 ## About the application
