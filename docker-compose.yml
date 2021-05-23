@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .  #use this dir context to find the docker file
+      dockerfile: Dockerfile.dev #mention the name of the docker file in this tag if you aren't using the default file name
+    ports:
+      - '3000:3000' . #map port 3000 on the machine to port 3000 in the container and open the port
+    volumes:
+      - /app/node_modules #tells docker to 'bookmark' this folder essentially saying don't refer to the app/modules folder in your parent dir.
+      - .:/app            #line here tells docker to refer to all the directories from the current directory in the container.
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ['npm', 'run', 'test']
