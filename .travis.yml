@@ -8,3 +8,17 @@ before_install:
 
 script: #to make sure the process quits once the tests are done running
   - docker run -e CI=true thelotuseater/project1 npm run test
+
+#http://dockerk8sproject1-env.eba-iigqiam4.us-east-2.elasticbeanstalk.com/
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-kubernetes-project1"
+  env: "Dockerkubernetesproject1-env"
+  bucket_name: "elasticbeanstalk-us-east-2-271322607371" #gets init when you create the elasticbeanstalk instance
+  bucket_path: "docker-kubernetes-project1" #Elastic bean stalk will by default use the same s3 bucket for all applications, the path for them will be different. Path is initialize as the name of the first app.
+  on:
+    branch: master #deploy whenever you push code to master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
