@@ -15,3 +15,4 @@ RUN npm run build
 FROM nginx
 COPY --from=builder /app/build /usr/share/nginx/html
 #Only take everything from your app/build and dump it into nginx html
+#NGINX is a great tool for handling production grade traffic.
