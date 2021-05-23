@@ -1,6 +1,6 @@
 # Project 1
 
-This is a sample project to demonstrate hotswapping of code in docker by using volumes, bookmarking directories.
+This is a sample project to demonstrate hotswapping of code, and bookmarking directories in docker by using the volumes tag.
 
 ##Usage
 Run ```docker-compose up to build the image and serve it. ```
