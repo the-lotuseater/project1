@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          React is so cool. Check it out here.
+          React is so cool. Check it out here. More dummy text.
         </a>
       </header>
     </div>
