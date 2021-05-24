@@ -9,7 +9,7 @@ before_install:
 script: #to make sure the process quits once the tests are done running
   - docker run -e CI=true thelotuseater/project1 npm run test
 
-#http://dockerk8sproject1-env.eba-iigqiam4.us-east-2.elasticbeanstalk.com/
+#http://dockerk8sproject1-env.eba-iigqiam4.us-east-2.elasticbeanstalk.com/ <- URL for elastic beanstalk
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
