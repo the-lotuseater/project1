@@ -4,7 +4,7 @@ services: #install docker
   - docker
 
 before_install:
-  - docker build -t thelotuseater/project1 -f Dockerfile.dev .
+  - docker build -t thelotuseater/project1 -f Dockerfile .
 
 script: #to make sure the process quits once the tests are done running
   - docker run -e CI=true thelotuseater/project1 npm run test
